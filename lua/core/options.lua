@@ -84,3 +84,10 @@ local default_plugins = {
 for _, plugin in pairs(default_plugins) do
   g["loaded_" .. plugin] = 1
 end
+
+-----------------------------------
+--- NEOVIDE SETTINGS  ---
+if g.neovide then
+  opt.guifont = "JetBrainsMono_Nerd_Font:h9.5"
+  g.neovide_hide_mouse_when_typing = true
+end
