@@ -19,3 +19,5 @@ require("lazy").setup({
       lazy = false, -- plugins are not lazy loaded by default
     },
 })
+
+vim.cmd([[colorscheme tokyonight]])
