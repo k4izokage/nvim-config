@@ -4,3 +4,4 @@ if vim.loader then
 end
 
 require('core')
+require('lazyInit')
