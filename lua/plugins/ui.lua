@@ -16,4 +16,13 @@ return {
             require('plugins.configs.lualine')
         end,
     },
+
+    -- Cursor line number mode indicator
+    {
+        'mawkler/modicator.nvim',
+        event = "BufEnter",
+        config = function()
+          require('plugins.configs.modicator')
+        end,
+    },
 }
