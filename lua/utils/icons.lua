@@ -1,4 +1,15 @@
 return {
+    alpha_plugin = {
+        recently_opened = "  ",
+        new_file = "  ",
+        file = "  ",
+        text = "  ",
+        project = "  ",
+        update = "  ",
+        quit = "󰈆  ",
+        config = "  ",
+    },
+
     misc = {
         dots = "󰇘",
     },

@@ -22,4 +22,15 @@ return {
     TerminalMode       = "#56b6c2",
     TerminalNormalMode = "#37a807",
   },
+
+  alpha_plugin = {
+    AlphaBlue   = "#7297E6",
+    AlphaCyan   = "#7DCFFF",
+    AlphaGreen  = "#9ECE6A",
+    AlphaOrange = "#ff966c",
+    AlphaRed    = "#F7768E",
+    AlphaViolet = "#9d7cd8",
+    AlphaYellow = "#E0AF68",
+    AlphaWhite  = "#C0CAF4",
+  }
 }

@@ -25,4 +25,13 @@ return {
           require('plugins.configs.modicator')
         end,
     },
+
+    -- Dashboard
+    {
+        'goolord/alpha-nvim',
+        event = "VimEnter",
+        config = function()
+          require('plugins.configs.alpha')
+        end,
+    },
 }
