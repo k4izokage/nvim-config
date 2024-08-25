@@ -11,4 +11,15 @@ return {
     yellow     = '#EFBD5E',
     white      = '#abb2bf',
   },
+  
+  modicator_plugin = {
+    NormalMode         = "#37a807",
+    InsertMode         = "#559dd7",
+    VisualMode         = "#C75AE9",
+    CommandMode        = "#f0a400",
+    ReplaceMode        = "#F65866",
+    SelectMode         = "#C75AE9",
+    TerminalMode       = "#56b6c2",
+    TerminalNormalMode = "#37a807",
+  },
 }
