@@ -5,6 +5,7 @@ end
 
 ---------- Variables and Functions ----------
 local icons = require("utils.icons")
+local navic = require("nvim-navic")
 
 -- Hide sections as the window width decreases to save space for necessary sections.
 local function min_window_width(width)
@@ -82,7 +83,18 @@ lualine.setup {
     lualine_z = {'location'}
   },
   tabline = {},
-  winbar = {},
+  winbar = {
+    lualine_c = {
+      {
+        function()
+          return navic.get_location()
+        end,
+        cond = function()
+          return navic.is_available()
+        end
+      },
+    },
+  },
   inactive_winbar = {},
   extensions = {}
 }
