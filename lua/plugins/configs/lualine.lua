@@ -5,6 +5,7 @@ end
 
 ---------- Variables and Functions ----------
 local icons = require("utils.icons")
+local colors = require("utils.highlights").lualine_plugin
 local navic = require("nvim-navic")
 
 -- Hide sections as the window width decreases to save space for necessary sections.
@@ -13,6 +14,24 @@ local function min_window_width(width)
 end
 
 ---------- Components ----------
+local my_theme = {
+  normal = {
+    a = { fg = colors.black, bg = colors.green, gui = 'bold' },
+    b = { fg = colors.white, bg = colors.lightgray },
+    c = { fg = colors.white, bg = colors.gray },
+  },
+  command = { a = { fg = colors.black, bg = colors.yellow, gui = 'bold' } },
+  insert = { a = { fg = colors.black, bg = colors.blue, gui = 'bold' } },
+  visual = { a = { fg = colors.black, bg = colors.purple, gui = 'bold' } },
+  terminal = { a = { fg = colors.black, bg = colors.cyan, gui = 'bold' } },
+  replace = { a = { fg = colors.black, bg = colors.red, gui = 'bold' } },
+  inactive = {
+    a = { fg = colors.white, bg = colors.black, gui = 'bold' },
+    b = { fg = colors.white, bg = colors.black },
+    c = { fg = colors.white, bg = colors.gray },
+  },
+}
+
 local diagnostics = {
 	"diagnostics",
 	sources = { "nvim_lsp" },
@@ -54,7 +73,7 @@ local filetype = { "filetype", cond = min_window_width(80) }
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = 'onedark',
+    theme = my_theme,
     component_separators = { left = '', right = '|'},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
